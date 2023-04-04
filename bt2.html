@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm phần tử trong mảng</title>
+</head>
+<body>
+    <script>
+        function findItem(item, arr) {
+            for ( var i = 0; i < arr.length; i++) {
+                if ( arr[i] == item) {
+                    return alert(`Phần tử: ${item} nằm ở vị trí: ${i} trong mảng`);
+                }
+            }
+        };
+
+    let arr = [2,3,5,7,8];
+    let item = 8;
+    
+    findItem(item, arr);
+
+    let number =+ prompt('Nhập vào số cần tìm:');
+    findItem(number, arr);
+    
+    </script>
+</body>
+</html>

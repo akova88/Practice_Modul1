@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đếm ký tự</title>
+</head>
+
+<body>
+    <script>
+        
+            function countNguyenam(str) {
+                let count = 0;
+                const nguyenam = ['a', 'e', 'i', 'o', 'u'];
+                for (let i = 0; i < str.length; i++) {
+                    if (nguyenam.includes(str[i].toLowerCase())) {
+                        count++;
+                    }
+                }
+                if ( count == 0) {
+                    return false;
+                } else { return count };
+            };
+
+        let myString = ['a', 'b', 'c', 'd', 'e', 'u', 'o', 'i'];
+        console.log(countNguyenam(myString));
+    </script>
+</body>
+
+</html>

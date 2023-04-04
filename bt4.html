@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xây dựng lớp Staff</title>
+</head>
+<body>
+    <script>
+        class Staff {
+            constructor(fullname, email) {
+                this.fullname = fullname;
+                this.email = email;
+            }
+            setFullname(fullname) {
+                this.fullname = fullname;
+            }
+            getFullname() {
+                return this.fullname;
+            }
+            setEmail(email) {
+                this.email = email;
+            }
+            getEmail() {
+                return this.email;
+            }
+            toString() {
+                return console.log(`Nhân viên: ${this.fullname} có email là: ${this.email}`);
+            }
+        } 
+
+        let david = new Staff('David', 'david@gmail.com');
+        david.setFullname('David Do');
+        console.log(david.getFullname());
+        david.setEmail('david.do@gmail.com');
+        console.log(david.getEmail());
+        david.toString();
+
+        let staffs = [
+        new Staff('David', 'david@gmail.com'),
+        new Staff('David1', 'david1@gmail.com'),
+        new Staff('David2', 'david2@gmail.com')
+        ];
+
+        for (var staff of staffs) {
+            staff.toString()
+        }
+    </script>
+</body>
+</html>
